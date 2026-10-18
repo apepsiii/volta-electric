@@ -108,7 +108,7 @@ async function openProductModal(productId) {
         </div>
 
         <div class="pt-2">
-          <a href="https://wa.me/6281386698222?text=Halo%20PT%20Mega%20Karya%20Perkasa,%20saya%20tertarik%20dengan%20${encodeURIComponent(p.name)}%20(voltra-electric.id)" target="_blank" class="btn-lime w-full py-3.5 rounded-xl text-center text-xs font-black uppercase tracking-wider flex items-center justify-center gap-2">
+          <a href="https://wa.me/18732768961?text=Halo%20PT%20Mega%20Karya%20Perkasa,%20saya%20tertarik%20dengan%20${encodeURIComponent(p.name)}%20(voltra-electric.id)" target="_blank" class="btn-lime w-full py-3.5 rounded-xl text-center text-xs font-black uppercase tracking-wider flex items-center justify-center gap-2">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
             Minta Penawaran Resmi via WhatsApp
           </a>
@@ -178,7 +178,7 @@ function initInquiryForm() {
       console.error(err);
       // Fallback direct URL creation
       const msg = `Halo PT Mega Karya Perkasa,\nSaya (${clientName || 'Pelanggan'}) ingin menanyakan Trafo VOLTRA:\n- Tangki: ${tankType}\n- Kapasitas: ${capacityKVA}\n- Bahan Belitan: ${winding}\n- Tegangan: ${voltage}`;
-      window.open(`https://wa.me/6281386698222?text=${encodeURIComponent(msg)}`, '_blank');
+      window.open(`https://wa.me/18732768961?text=${encodeURIComponent(msg)}`, '_blank');
     }
   });
 }

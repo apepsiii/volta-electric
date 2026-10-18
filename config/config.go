@@ -28,14 +28,24 @@ func Load() *Config {
 		env = "development"
 	}
 
+	contactWA := os.Getenv("CONTACT_WA")
+	if contactWA == "" {
+		contactWA = "18732768961"
+	}
+
+	contactTelp := os.Getenv("CONTACT_TELP")
+	if contactTelp == "" {
+		contactTelp = "+1 (873) 276-8961"
+	}
+
 	return &Config{
 		Port:        port,
 		Domain:      "voltra-electric.id",
 		Environment: env,
 		CompanyName: "PT. MEGA KARYA PERKASA",
 		BrandName:   "VOLTRA",
-		ContactWA:   "6281386698222",
-		ContactTelp: "0813-8669-8222",
+		ContactWA:   contactWA,
+		ContactTelp: contactTelp,
 		Address:     "Indonesia",
 	}
 }
