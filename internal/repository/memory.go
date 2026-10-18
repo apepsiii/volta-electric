@@ -210,7 +210,7 @@ func NewMemoryRepository() Repository {
 				"Penyempurnaan desain kontinu sesuai perkembangan standar IEC & SPLN",
 			},
 			ImageURLs: []string{
-				"/static/img/rd_team.jpg",
+				"/static/img/rd_engineering_team.jpg",
 			},
 		},
 	}

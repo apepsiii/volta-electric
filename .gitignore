@@ -13,6 +13,11 @@ bin/
 context/pdf_hires/
 context/pdf_pages/
 context/slices/
+context/*.png
+context/*.py
+context/user_slices/
+preview/
+screencapture-*.png
 
 # OS and Editors
 .DS_Store
