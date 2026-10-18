@@ -1,0 +1,113 @@
+{{define "hero"}}
+<!-- HERO SECTION (MATCHING SCREENSHOT AESTHETIC) -->
+<section id="beranda" class="pt-12 pb-16 md:py-20 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <!-- Headline with Two-Tone Styling -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-4">
+      Solusi Andal <span class="text-lime-500 italic">Jaringan Distribusi</span> Anda
+    </h1>
+    
+    <!-- Subheadline -->
+    <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-600 mb-10 leading-relaxed font-normal">
+      {{.Company.LegalName}} menghadirkan trafo distribusi berpendingin minyak berkualitas tinggi dengan merek dagang <strong class="text-slate-900">{{.Company.BrandName}}</strong>, dirancang presisi sesuai standar <strong class="text-slate-900">IEC</strong> dan <strong class="text-slate-900">SPLN</strong> untuk keandalan maksimal infrastruktur kelistrikan nasional.
+    </p>
+
+    <!-- Large Rounded Hero Showcase Card (Exact vibe of Screenshot Hero Banner) -->
+    <div class="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-slate-200/80 shadow-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white p-6 sm:p-10 md:p-12 text-left">
+      
+      <!-- Background Grid Pattern -->
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#a8f020_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Column: Transformer Showcase Visual -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg border border-slate-700/60 group">
+            <img src="/static/img/trafo_line_display.jpg" alt="Lini Produksi Trafo VOLTRA PT Mega Karya Perkasa" class="w-full h-72 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            
+            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+              <div>
+                <span class="inline-block bg-[#a8f020] text-slate-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-md mb-1.5 tracking-wider">
+                  Fasilitas Pabrik
+                </span>
+                <p class="text-xs text-slate-200 font-medium">Lini Perakitan Trafo Distribusi {{.Company.BrandName}}</p>
+              </div>
+              <span class="text-xs font-bold text-sky-400 bg-slate-900/80 px-2 py-1 rounded border border-slate-700">SPLN & IEC</span>
+            </div>
+          </div>
+
+          <!-- Floating mini badge -->
+          <div class="absolute -top-3 -right-3 bg-white text-slate-900 rounded-2xl shadow-xl p-3 border border-slate-100 flex items-center gap-3 hidden sm:flex">
+            <div class="w-10 h-10 rounded-xl bg-lime-100 text-lime-700 flex items-center justify-center font-black text-sm">
+              50+
+            </div>
+            <div class="text-left pr-2">
+              <div class="text-[11px] font-bold text-slate-900 leading-tight">Uji Dielektrik Oli</div>
+              <div class="text-[10px] text-slate-500 font-medium">Minimum 50 kV Standar</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Key Bullet Points matching Volta screenshot banner structure -->
+        <div class="lg:col-span-6 space-y-4">
+          
+          <div class="inline-block bg-slate-800 text-[#a8f020] text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-700 tracking-wide uppercase">
+            Keunggulan {{.Company.LegalName}}
+          </div>
+
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+            Dirancang Seimbang Antara Mutu, Efisiensi & Kinerja
+          </h3>
+
+          <!-- Checkmark Highlights (matching screenshot style) -->
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 w-5 h-5 rounded-full bg-[#a8f020]/20 text-[#a8f020] flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span><strong>Didirikan Sejak {{.Company.EstablishedYear}}</strong>: Pengalaman lebih dari satu dekade manufaktur trafo distribusi andal.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 w-5 h-5 rounded-full bg-[#a8f020]/20 text-[#a8f020] flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span><strong>Merek Dagang Terpercaya "{{.Company.BrandName}}"</strong>: Berpendingin minyak (oil-immersed) dengan efisiensi tinggi.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 w-5 h-5 rounded-full bg-[#a8f020]/20 text-[#a8f020] flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span><strong>{{.Company.QualitySystem}}</strong>: Pengawasan mutu pada setiap tahapan perakitan hingga pengetesan akhir.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 w-5 h-5 rounded-full bg-[#a8f020]/20 text-[#a8f020] flex items-center justify-center flex-shrink-0">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <span><strong>100% Lulus Uji Laboratorium</strong>: Memenuhi standar IEC dan SPLN sebelum dikirim ke pelanggan.</span>
+            </li>
+          </ul>
+
+          <!-- CTA Buttons -->
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="#produk" class="btn-lime px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2">
+              Jelajahi Produk Trafo
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#kalkulator" class="bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 transition">
+              Minta Spesifikasi Teknis
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{{end}}
+

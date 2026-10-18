@@ -1,0 +1,110 @@
+{{define "components"}}
+<!-- FEATURES & COMPONENTS (MATCHING SGB & SERVICE CARDS FROM SCREENSHOT) -->
+<section id="komponen" class="py-16 bg-[#f8fafc]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    
+    <!-- Card Feature 1: Tanki & Radiator (Exact SGB Card vibe in screenshot) -->
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-md flex flex-col lg:flex-row items-center gap-8 justify-between">
+      
+      <!-- Left: Image of Process -->
+      <div class="w-full lg:w-5/12">
+        <div class="grid grid-cols-2 gap-3 rounded-2xl overflow-hidden p-2 bg-slate-100 border border-slate-200">
+          <img src="/static/img/process_clamp_measuring.jpg" alt="Perakitan Tangki Trafo" class="w-full h-32 object-cover rounded-xl">
+          <img src="/static/img/process_fin_grinding.jpg" alt="Grinding Radiator Fin" class="w-full h-32 object-cover rounded-xl">
+          <img src="/static/img/process_tank_welding.jpg" alt="Pengelasan Fin Wall" class="w-full h-32 object-cover rounded-xl">
+          <img src="/static/img/process_spray_painting.jpg" alt="Pengecatan 80 mikron" class="w-full h-32 object-cover rounded-xl">
+        </div>
+        <div class="text-[11px] text-slate-500 text-center mt-2 font-medium">4 Tahapan Fabrikasi Tanki & Core Clamp {{.Company.BrandName}}</div>
+      </div>
+
+      <!-- Right: Text & Details from PDF -->
+      <div class="w-full lg:w-7/12 space-y-4">
+        <span class="inline-block bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Struktur Mekanikal
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          Tanki Baja Presisi & Radiator Fin Wall
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Terbuat dari plat baja hitam (<em>Cold Rolled atau Hot Rolled</em>) berkualitas tinggi dengan sirip <strong>fin wall (Corrugated Radiator)</strong> atau <strong>Panel Radiator</strong> yang disesuaikan dengan kapasitas trafo.
+        </p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700 pt-2">
+          <div class="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <span class="text-[#a8f020] bg-slate-900 rounded-full w-5 h-5 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">✓</span>
+            <span><strong>Uji Kebocoran & Washing</strong>: Menjamin tangki 100% kedap dan bebas kotoran partikel.</span>
+          </div>
+          <div class="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <span class="text-[#a8f020] bg-slate-900 rounded-full w-5 h-5 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">✓</span>
+            <span><strong>Cat Min. 80 Mikron</strong>: Proteksi coating anti-karat ketebalan tinggi untuk ketahanan cuaca tropis ekstrem.</span>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="#kalkulator" class="btn-lime px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider inline-block">
+            Pilih Jenis Tanki
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Card Feature 2: Core & Coil + Bahan Isolasi (Matching Service Card vibe in screenshot) -->
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-md flex flex-col lg:flex-row items-center gap-8 justify-between">
+      
+      <!-- Left: Text Info -->
+      <div class="w-full lg:w-7/12 space-y-4 order-2 lg:order-1">
+        <span class="inline-block bg-lime-100 text-lime-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Material Kelas Utama
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          Inti Besi (Core), Kumparan (Coil) & Isolasi Tinggi
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Kinerja listrik trafo {{.Company.BrandName}} didukung oleh pemilihan bahan baku premium yang teruji secara ketat demi efisiensi maksimal dan rugi-rugi daya yang rendah:
+        </p>
+
+        <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+          <li class="flex items-start gap-2.5">
+            <span class="text-sky-600 font-bold">•</span>
+            <span><strong>Inti Besi (CRGO)</strong>: Cold Rolled Grain Oriented Silicon Sheet mutu tinggi dengan rugi histeresis sangat rendah.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-sky-600 font-bold">•</span>
+            <span><strong>Kumparan Tembaga & Alumunium Murni</strong>: Kawat tembaga bulat berenamel tegangan tinggi & lembaran tembaga berlapis kertas isolasi.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-sky-600 font-bold">•</span>
+            <span><strong>Oil Duct Cermat</strong>: Saluran sirkulasi minyak terkompaksi presisi untuk transfer panas efektif dan pelindung hubung singkat.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="text-sky-600 font-bold">•</span>
+            <span><strong>Diamond Dotted Paper & Press Board</strong>: Penguat mekanis kumparan terhadap lonjakan arus dinamis.</span>
+          </li>
+        </ul>
+
+        <div class="pt-2 flex items-center gap-3">
+          <a href="https://wa.me/{{.Config.ContactWA}}" target="_blank" class="btn-lime px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Konsultasi Bahan & Desain
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Image of Core & Coil -->
+      <div class="w-full lg:w-5/12 order-1 lg:order-2">
+        <div class="grid grid-cols-2 gap-3 rounded-2xl overflow-hidden p-2 bg-slate-100 border border-slate-200">
+          <img src="/static/img/core_silicon.jpg" alt="Inti Besi CRGO Silicon Sheet" class="w-full h-36 object-cover rounded-xl">
+          <img src="/static/img/coil_winding.jpg" alt="Mesin Pembuat Kumparan Coil" class="w-full h-36 object-cover rounded-xl">
+          <div class="col-span-2">
+            <img src="/static/img/insulation_paper.jpg" alt="Bahan Isolasi Diamond Dotted Paper" class="w-full h-32 object-cover rounded-xl">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{{end}}
+

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <!-- Dynamic Lightning / Energy Shape -->
+  <g transform="translate(4, 8)">
+    <polygon points="26,2 8,28 22,28 14,48 38,20 24,20" fill="#a3e635" />
+    <polygon points="26,2 8,28 22,28 14,48 38,20 24,20" fill="url(#bolt-grad)" />
+    <path d="M4 14L16 4L28 14" stroke="#0284c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+  </g>
+  
+  <!-- VOLTRA Brand Text -->
+  <text x="56" y="38" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="34" font-weight="900" font-style="italic" fill="#0f172a" letter-spacing="-0.04em">
+    VOLT<tspan fill="#0284c7">RA</tspan>
+  </text>
+  
+  <!-- Subtitle PT Mega Karya Perkasa -->
+  <text x="58" y="52" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#64748b" letter-spacing="0.12em">
+    PT MEGA KARYA PERKASA
+  </text>
+
+  <defs>
+    <linearGradient id="bolt-grad" x1="8" y1="2" x2="38" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#bbf438"/>
+      <stop offset="1" stop-color="#84cc16"/>
+    </linearGradient>
+  </defs>
+</svg>
+

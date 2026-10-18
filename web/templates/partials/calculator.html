@@ -1,0 +1,105 @@
+{{define "calculator"}}
+<!-- INTERACTIVE SPECIFICATION CALCULATOR / INQUIRY -->
+<section id="kalkulator" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm">
+      
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          Layanan Pelanggan & Sales
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
+          Konsultasikan Spesifikasi Trafo {{.Company.BrandName}}
+        </h2>
+        <p class="text-slate-500 text-xs sm:text-sm mt-1">
+          Pilih estimasi kebutuhan teknis jaringan Anda dan kirimkan langsung via WhatsApp ke tim engineering {{.Company.LegalName}}.
+        </p>
+      </div>
+
+      <form id="trafo-form" class="space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Tipe Tangki -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Jenis Tangki Radiator</label>
+            <select id="spec-tank" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#a8f020]">
+              <option value="Hermetik Fin Wall (Corrugated Radiator)">Hermetik Fin Wall (Corrugated Radiator)</option>
+              <option value="Conservator Tank (Panel Radiator)">Conservator Tank (Panel Radiator)</option>
+              <option value="Hermetik dengan Bantalan Gas Nitrogen">Hermetik dengan Bantalan Gas Nitrogen</option>
+              <option value="Custom Spesifikasi Khusus">Custom Spesifikasi Khusus</option>
+            </select>
+          </div>
+
+          <!-- Kapasitas kVA -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Kapasitas Daya (kVA)</label>
+            <select id="spec-kva" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#a8f020]">
+              <option value="50 kVA">50 kVA</option>
+              <option value="100 kVA">100 kVA</option>
+              <option value="160 kVA">160 kVA</option>
+              <option value="200 kVA">200 kVA</option>
+              <option value="250 kVA">250 kVA</option>
+              <option value="315 kVA">315 kVA</option>
+              <option value="400 kVA">400 kVA</option>
+              <option value="500 kVA">500 kVA</option>
+              <option value="630 kVA" selected>630 kVA (Standard Industri)</option>
+              <option value="800 kVA">800 kVA</option>
+              <option value="1000 kVA">1000 kVA (1 MVA)</option>
+              <option value="1250 kVA">1250 kVA</option>
+              <option value="1600 kVA">1600 kVA</option>
+              <option value="2000 kVA">2000 kVA (2 MVA)</option>
+              <option value="2500 kVA">2500 kVA</option>
+            </select>
+          </div>
+
+          <!-- Material Belitan -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Bahan Kumparan (Coil)</label>
+            <select id="spec-winding" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#a8f020]">
+              <option value="Tembaga (Cu) Murni">Tembaga (Cu) Murni</option>
+              <option value="Alumunium (Al) Murni">Alumunium (Al) Murni</option>
+              <option value="Kombinasi Sesuai SPLN">Kombinasi Sesuai SPLN</option>
+            </select>
+          </div>
+
+          <!-- Rasio Tegangan -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Tegangan Primer / Sekunder</label>
+            <select id="spec-voltage" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#a8f020]">
+              <option value="20 kV / 400 V (Standar PLN)">20 kV / 400 V (Standar PLN)</option>
+              <option value="20 kV / 380 V">20 kV / 380 V</option>
+              <option value="6.6 kV / 400 V">6.6 kV / 400 V</option>
+              <option value="Tegangan Khusus Lainnya">Tegangan Khusus Lainnya</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Catatan / Nama Perusahaan -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Anda / Instansi Perusahaan</label>
+            <input type="text" id="spec-client" placeholder="Contoh: PT Sumber Daya Energi / Bpk. Hendra" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#a8f020]">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Catatan Tambahan (Opsional)</label>
+            <input type="text" id="spec-notes" placeholder="Contoh: Pengiriman ke Cikarang, butuh sertifikat FAT" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#a8f020]">
+          </div>
+        </div>
+
+        <div class="text-center pt-2">
+          <button type="button" id="submit-inquiry-btn" class="btn-lime w-full sm:w-auto px-8 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-wider inline-flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Kirim Spesifikasi Langsung ke WhatsApp Sales
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+{{end}}
+

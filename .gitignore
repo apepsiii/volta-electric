@@ -1,0 +1,21 @@
+# Binaries
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Environment
+.env
+
+# Temp context renders
+context/pdf_hires/
+context/pdf_pages/
+context/slices/
+
+# OS and Editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
